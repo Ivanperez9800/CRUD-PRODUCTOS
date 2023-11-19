@@ -10,7 +10,7 @@ export const insertProducto = async (productos) => {
     try {
 
         const docRef = await addDoc(productoCollection, productos)
-        console.log("Se creo un nuevo producto con ID:", docRef.id)
+        // console.log("Se creo un nuevo producto con ID:", docRef.id)
     } catch (e) {
         console.error("Error adding document: ", e);
     }
@@ -40,7 +40,7 @@ export const borrarProducto = async (id) => {
             // Solo borrar el primer documento encontrado (asumiendo que hay uno)
             const firstDoc = querySnapshot.docs[0];
             await deleteDoc(doc(productoCollection, firstDoc.id));
-            console.log("Documento borrado:", firstDoc.id);
+            // console.log("Documento borrado:", firstDoc.id);
 
         } else {
             console.log("No se encontraron documentos coincidentes.");
