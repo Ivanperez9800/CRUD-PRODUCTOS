@@ -10,7 +10,7 @@ function ProductosProvider({ children }) {
     try {
       const productos = await mostrarProducto();
       setListaProductos(productos);
-      console.log(productos);
+      // console.log(productos);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
